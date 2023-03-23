@@ -13,7 +13,7 @@ namespace POEPART1
         class Recipe
         {
 
-            //Declaration of the arrays used within the project.
+            //Declaration of the respective arrays used within the project.
             private string[] ingredientNames;
             private double[] ingredientQuantities;
             private string[] ingredientUnits;
@@ -25,11 +25,12 @@ namespace POEPART1
                 Console.WriteLine("Enter the number of ingredients:");
                 int numIngredients = int.Parse(Console.ReadLine());
 
-                // Passing the numIngredients variable (Integer) into arrays.
+                // Passing the numIngredients variable (Integer) into the necessary arrays.
                 ingredientNames = new string[numIngredients];
                 ingredientQuantities = new double[numIngredients];
                 ingredientUnits = new string[numIngredients];
 
+                // Looping the questions for additional user input.
                 for (int i = 0; i < numIngredients; i++)
                 {
                     Console.WriteLine($"Enter the name of ingredient {i + 1}:");
@@ -42,6 +43,7 @@ namespace POEPART1
                     ingredientUnits[i] = Console.ReadLine();
                 }
 
+                // Specifying the size of the specifc array used in the below code.
                 Console.WriteLine("Enter the number of steps:");
                 int numSteps = int.Parse(Console.ReadLine());
 
