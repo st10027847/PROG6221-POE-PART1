@@ -14,10 +14,11 @@ namespace POEPART1
         {
 
             //Declaration of the respective arrays used within the project.
-            private string[] ingredientNames;
-            private double[] ingredientQuantities;
-            private string[] ingredientUnits;
-            private string[] steps;
+
+            private string[] ingredientNames; // Will store ingredients...
+            private double[] ingredientQuantities; // Will store quantities of various ingredients...
+            private string[] ingredientUnits; // Will store the UoM (Unit of Measurements) used for the recipe...
+            private string[] steps; // Will store the steps provided for the recipe...
 
             // Accepts the user's input for the list of ingredients.
             public void EnterRecipeDetails()
@@ -159,4 +160,5 @@ namespace POEPART1
 // * = Using a '$' sign will identify the string as a String literal.
 // When an interpolated string is outputted, the items with interpolation will be replaced with the string representations of the expression results.
 
+// Program Debugging ran successfully and issues/errors corrected/adjusted accordingly.
 // All unit tests executed and ran successfully...
