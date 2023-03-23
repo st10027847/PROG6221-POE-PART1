@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace POEPART1
+﻿namespace POEPART1
 {
     using System;
 
@@ -45,7 +39,9 @@ namespace POEPART1
                 }
 
                 // Specifying the size of the specifc array used in the below code.
+
                 Console.WriteLine("Enter the number of steps:");
+
                 int numSteps = int.Parse(Console.ReadLine());
 
                 steps = new string[numSteps];
@@ -98,7 +94,7 @@ namespace POEPART1
             // The ClearRecipe module allows the user to clear the previously provided quantities. 
             public void ClearRecipe()
             {
-                ingredientNames = null;
+                ingredientNames = null; // null**
                 ingredientQuantities = null;
                 ingredientUnits = null;
                 steps = null;
@@ -124,6 +120,7 @@ namespace POEPART1
                     int choice = int.Parse(Console.ReadLine());
 
                     // The below switch-case statement is used to call/invoke the respective methods when a specific option is chosen by the user within the provided menu.
+                    // Switch-case in the below scenario , used in this specific manner, is due to the requirements and constraints presented in the assessment brief.
                     switch (choice)
                     {
                         case 1:
@@ -158,6 +155,9 @@ namespace POEPART1
 }
 
 // * = Using a '$' sign will identify the string as a String literal.
+// ** = As the 'null' keyword has been used within this specific method,
+    // it will ensure that the values associated with the respective variables will be set back to zero (0). 
+
 // When an interpolated string is outputted, the items with interpolation will be replaced with the string representations of the expression results.
 
 // Program Debugging ran successfully and issues/errors corrected/adjusted accordingly.
