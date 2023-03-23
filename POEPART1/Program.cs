@@ -102,7 +102,54 @@ namespace POEPART1
             }
         }
 
-        
+        // Main section of project.
+        class Program
+        {
+            static void Main(string[] args)
+            {
+                Recipe recipe = new Recipe();
+
+                while (true)
+                {
+                    Console.WriteLine("\nEnter 1 to enter recipe details.");
+                    Console.WriteLine("Enter 2 to display recipe.");
+                    Console.WriteLine("Enter 3 to scale recipe.");
+                    Console.WriteLine("Enter 4 to reset quantities.");
+                    Console.WriteLine("Enter 5 to clear recipe.");
+                    Console.WriteLine("Enter 6 to exit.\n");
+
+                    int choice = int.Parse(Console.ReadLine());
+
+                    // The below switch-case statement is used to call/invoke the respective methods when a specific option is chosen by the user within the provided menu.
+                    switch (choice)
+                    {
+                        case 1:
+                            recipe.EnterRecipeDetails();
+                            break;
+                        case 2:
+                            recipe.DisplayRecipe();
+                            break;
+                        case 3:
+                            Console.WriteLine("Enter scale factor (0.5, 2, or 3):");
+                            double factor = double.Parse(Console.ReadLine());
+                            recipe.ScaleRecipe(factor);
+                            break;
+                        case 4:
+                            recipe.ResetQuantities();
+                            break;
+                        case 5:
+                            recipe.ClearRecipe();
+                            break;
+                        case 6:
+                            Environment.Exit(0);
+                            break;
+                        default:
+                            Console.WriteLine("Invalid choice. Please enter a number between 1 and 6.");
+                            break;
+                    }
+                }
+            }
+        }
     }
 
 }
