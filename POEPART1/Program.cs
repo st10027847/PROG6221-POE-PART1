@@ -108,7 +108,7 @@
             {
                 Recipe recipe = new Recipe();
 
-                while (true)
+                while(true)
                 {
                     Console.WriteLine("\nEnter 1 to enter recipe details.");
                     Console.WriteLine("Enter 2 to display recipe.");
