@@ -20,7 +20,7 @@
                 Console.WriteLine("Enter the number of ingredients:");
                 int numIngredients = int.Parse(Console.ReadLine());
 
-                // Passing the numIngredients variable (Integer) into the necessary arrays.
+                
                 ingredientNames = new string[numIngredients];
                 ingredientQuantities = new double[numIngredients];
                 ingredientUnits = new string[numIngredients];
