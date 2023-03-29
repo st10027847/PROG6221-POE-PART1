@@ -14,7 +14,8 @@
             private string[] ingredientUnits; // Will store the UoM (Unit of Measurements) used for the recipe...
             private string[] steps; // Will store the steps provided for the recipe...
 
-            private string adjustUnit(double quantity, string unit)
+            // New function to adjust and display units based on quantity
+            private string AdjustUnit(double quantity, string unit)
             {
                 double gramToKilogram = 1000;
                 double teaspoonToTablespoon = 3;
@@ -81,8 +82,8 @@
 
                 for (int i = 0; i < ingredientNames.Length; i++)
                 {
-                    // String Interpolation*
-                    Console.WriteLine($"{adjustUnit(ingredientQuantities[i], ingredientUnits[i])} of {ingredientNames[i]}");
+                    // Use the adjustUnit method to display the adjusted unit and quantity
+                    Console.WriteLine($"{AdjustUnit(ingredientQuantities[i], ingredientUnits[i])} of {ingredientNames[i]}");
                 }
 
                 Console.WriteLine("\nSteps:");
