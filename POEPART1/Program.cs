@@ -82,7 +82,7 @@
                 for (int i = 0; i < ingredientNames.Length; i++)
                 {
                     // String Interpolation*
-                    Console.WriteLine($"{ingredientQuantities[i]} {ingredientUnits[i]} of {ingredientNames[i]}");
+                    Console.WriteLine($"{adjustUnit(ingredientQuantities[i], ingredientUnits[i])} of {ingredientNames[i]}");
                 }
 
                 Console.WriteLine("\nSteps:");
