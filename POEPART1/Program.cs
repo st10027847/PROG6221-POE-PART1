@@ -14,6 +14,27 @@
             private string[] ingredientUnits; // Will store the UoM (Unit of Measurements) used for the recipe...
             private string[] steps; // Will store the steps provided for the recipe...
 
+            private string adjustUnit(double quantity, string unit)
+            {
+                double gramToKilogram = 1000;
+                double teaspoonToTablespoon = 3;
+                double tablespoonToCup = 16;
+
+                if (unit == "gram" && quantity >= gramToKilogram)
+                {
+                    quantity /= gramToKilogram;
+                    unit = "kilogram";
+                }else if(unit == "teaspoon" && quantity >= teaspoonToTablespoon)
+                {
+                    quantity /= teaspoonToTablespoon;
+                    unit = "tablespoon";
+                }else if(unit == "tablespoon" && quantity >= tablespoonToCup)
+                {
+                    quantity /= tablespoonToCup;
+                    unit = "cup";
+                }
+                return $" {quantity} {unit} ";
+            }
             // Accepts the user's input for the list of ingredients.
             public void EnterRecipeDetails()
             {
